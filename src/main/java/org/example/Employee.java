@@ -26,14 +26,14 @@ public class Employee {
     }
 
     public void setFirstName(String firstName) {
-        if (StringUtils.isBlank(firstName) || !StringUtils.isAlphaSpace(firstName)) {
+        if (StringUtils.isBlank(firstName) || !StringUtils.isAlpha(firstName)) {
             throw new RuntimeException("400 Bad Request");
         }
         this.firstName = StringUtils.capitalize(firstName);
     }
 
     public void setLastName(String lastName) {
-        if (StringUtils.isBlank(lastName) || !StringUtils.isAlphaSpace(lastName)) {
+        if (StringUtils.isBlank(lastName) || !StringUtils.isAlpha(lastName)) {
             throw new RuntimeException("400 Bad Request");
         }
         this.lastName = StringUtils.capitalize(lastName);
